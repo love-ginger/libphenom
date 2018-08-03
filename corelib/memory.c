@@ -451,7 +451,7 @@ void *ph_mem_realloc(ph_memtype_t mt, void *ptr, uint64_t size)
     return ptr;
   }
 
-  ptr = hdr; 
+  ptr = hdr;
   hdr = realloc(ptr, size + HEADER_RESERVATION);
   if (!hdr) {
     ph_counter_scope_add(mem_type->scope,
